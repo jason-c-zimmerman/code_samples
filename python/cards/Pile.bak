@@ -1,0 +1,19 @@
+import Hand
+from random import shuffle
+
+class Pile:
+
+	pile = []
+
+	def __init__(self):
+		pass
+
+	def add(self, card):
+		#card.flip()
+		self.pile.append(card)
+
+	def pickup(self):
+		shuffle(self.pile)
+		card = self.pile.pop()
+		return card
+		#return card.flip()

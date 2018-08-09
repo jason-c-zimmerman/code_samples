@@ -1,0 +1,27 @@
+from Deck import *
+from Player import *
+
+class Dealer(Player):
+
+	def __init__(self, name):
+		self.name = name
+		self.draw_deck = Deck()
+		#self.discard_deck = Deck()
+
+	def add_deck(self):
+		self.draw_deck.add_deck()
+
+	def shuffle_draw(self):
+		self.draw_deck.shuffle()
+
+	#def shuffle_discard(self):
+	#	self.discard_deck.shuffle()
+
+	def deal_one(self):
+		return self.draw_deck.pop()
+
+def main():
+	pass
+
+if __name__ == "__main__":
+	main()
